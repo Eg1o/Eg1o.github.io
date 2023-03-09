@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Blog on R1gelX_Blog</title>
-    <link>http://blog.rigelx.top/blog/</link>
+    <link>https://blog.rigelx.top/blog/</link>
     <description>Recent content in Blog on R1gelX_Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>No Copyright © 2023-2023 . All Rights Reserved.
 </copyright>
-    <lastBuildDate>Thu, 09 Mar 2023 02:16:27 +0800</lastBuildDate><atom:link href="http://blog.rigelx.top/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Mar 2023 02:16:27 +0800</lastBuildDate><atom:link href="https://blog.rigelx.top/blog/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
 
