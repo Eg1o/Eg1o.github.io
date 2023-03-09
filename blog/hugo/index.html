@@ -1,0 +1,762 @@
+<!doctype html>
+<html class="position-relative" itemscope itemtype="http://schema.org/WebPage" lang="en"
+  data-bs-theme="auto" data-palette="purple">
+  <head><script src="/assets/init/bundle.min.0fc584357d8016402219848aafdc1171a38e1ec65d2158f5e6ef058bc54a1818.js" integrity="sha256-D8WENX2AFkAiGYSKr9wRcaOOHsZdIVj15u8Fi8VKGBg=" crossorigin="anonymous"></script>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hugo搭建 - R1gelX_Blog</title>
+    <link rel="icon" href="/favicon_hu380678e80b2510a69da3c264e9b38227_59027_16x16_resize_q75_h2_box_2.webp" sizes="16x16" type="image/webp">
+    <link rel="icon" href="/favicon_hu380678e80b2510a69da3c264e9b38227_59027_32x32_resize_q75_h2_box_2.webp" sizes="32x32" type="image/webp">
+    <link rel="icon" href="/favicon_hu380678e80b2510a69da3c264e9b38227_59027_150x150_resize_q75_h2_box_2.webp" sizes="150x150" type="image/webp">
+    <link rel="apple-touch-icon" href="/favicon_hu380678e80b2510a69da3c264e9b38227_59027_180x180_resize_q75_h2_box_2.webp" sizes="180x180" type="image/webp">
+    <link rel="icon" href="/favicon_hu380678e80b2510a69da3c264e9b38227_59027_192x192_resize_q75_h2_box_2.webp" sizes="192x192" type="image/webp">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#6f42c1">
+<meta name="keywords" content="Hugo, Bootstrap, Blog Theme" />
+  <meta name="description" content="hugo的简单使用安装安装选择官方推荐的巧克力(Chocolatey)
+Chocolatey安装1Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://community.chocolatey.org/install.ps1&#39;)) PS: 前置条件：运行Get-ExecutionPolicy。如果返回Restricted，则运行Set-ExecutionPolicy AllSigned或Set-ExecutionPolicy Bypass -Scope Process。
+安装GOLANG使用choco install golang -y
+安装hugo扩展使用choco install hugo-extended
+安装hugo设置go的代理 go env -w GOPROXY=https://goproxy.cn,direct 安装hugo源码 go env -w GOPROXY=https://goproxy.cn,direct 命令行环境二者选一
+powershell这个powershell和你本机的可能不一样，如何测试？
+1echo 123 &gt;&gt; 123.txt 2cat 123.txt 应该能看到在命令能看到读取到的123 否则就点击Fetching Title#lyss 进行安装
+git bashgit bash的安装资料很多了，这里就不列出了 建立站点在博客的文件夹（最好自己找个地方建立一下）在这个目录打开命令行 建立一个example1hugo new site quickstart #这是网站名称，会在当前目录建立一个同名文件夹 2cd quickstart 3git init 4git submodule add https://github." /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hugo搭建"/>
+<meta name="twitter:description" content="hugo的简单使用安装安装选择官方推荐的巧克力(Chocolatey)
+Chocolatey安装1Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://community.chocolatey.org/install.ps1&#39;)) PS: 前置条件：运行Get-ExecutionPolicy。如果返回Restricted，则运行Set-ExecutionPolicy AllSigned或Set-ExecutionPolicy Bypass -Scope Process。
+安装GOLANG使用choco install golang -y
+安装hugo扩展使用choco install hugo-extended
+安装hugo设置go的代理 go env -w GOPROXY=https://goproxy.cn,direct 安装hugo源码 go env -w GOPROXY=https://goproxy.cn,direct 命令行环境二者选一
+powershell这个powershell和你本机的可能不一样，如何测试？
+1echo 123 &gt;&gt; 123.txt 2cat 123.txt 应该能看到在命令能看到读取到的123 否则就点击Fetching Title#lyss 进行安装
+git bashgit bash的安装资料很多了，这里就不列出了 建立站点在博客的文件夹（最好自己找个地方建立一下）在这个目录打开命令行 建立一个example1hugo new site quickstart #这是网站名称，会在当前目录建立一个同名文件夹 2cd quickstart 3git init 4git submodule add https://github."/>
+<meta property="og:title" content="Hugo搭建" />
+<meta property="og:description" content="hugo的简单使用安装安装选择官方推荐的巧克力(Chocolatey)
+Chocolatey安装1Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://community.chocolatey.org/install.ps1&#39;)) PS: 前置条件：运行Get-ExecutionPolicy。如果返回Restricted，则运行Set-ExecutionPolicy AllSigned或Set-ExecutionPolicy Bypass -Scope Process。
+安装GOLANG使用choco install golang -y
+安装hugo扩展使用choco install hugo-extended
+安装hugo设置go的代理 go env -w GOPROXY=https://goproxy.cn,direct 安装hugo源码 go env -w GOPROXY=https://goproxy.cn,direct 命令行环境二者选一
+powershell这个powershell和你本机的可能不一样，如何测试？
+1echo 123 &gt;&gt; 123.txt 2cat 123.txt 应该能看到在命令能看到读取到的123 否则就点击Fetching Title#lyss 进行安装
+git bashgit bash的安装资料很多了，这里就不列出了 建立站点在博客的文件夹（最好自己找个地方建立一下）在这个目录打开命令行 建立一个example1hugo new site quickstart #这是网站名称，会在当前目录建立一个同名文件夹 2cd quickstart 3git init 4git submodule add https://github." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://blog.rigelx.top/blog/hugo/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2023-03-09T02:16:27+08:00" />
+<meta property="article:modified_time" content="2023-03-09T02:16:27+08:00" />
+<meta itemprop="name" content="Hugo搭建">
+<meta itemprop="description" content="hugo的简单使用安装安装选择官方推荐的巧克力(Chocolatey)
+Chocolatey安装1Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://community.chocolatey.org/install.ps1&#39;)) PS: 前置条件：运行Get-ExecutionPolicy。如果返回Restricted，则运行Set-ExecutionPolicy AllSigned或Set-ExecutionPolicy Bypass -Scope Process。
+安装GOLANG使用choco install golang -y
+安装hugo扩展使用choco install hugo-extended
+安装hugo设置go的代理 go env -w GOPROXY=https://goproxy.cn,direct 安装hugo源码 go env -w GOPROXY=https://goproxy.cn,direct 命令行环境二者选一
+powershell这个powershell和你本机的可能不一样，如何测试？
+1echo 123 &gt;&gt; 123.txt 2cat 123.txt 应该能看到在命令能看到读取到的123 否则就点击Fetching Title#lyss 进行安装
+git bashgit bash的安装资料很多了，这里就不列出了 建立站点在博客的文件夹（最好自己找个地方建立一下）在这个目录打开命令行 建立一个example1hugo new site quickstart #这是网站名称，会在当前目录建立一个同名文件夹 2cd quickstart 3git init 4git submodule add https://github."><meta itemprop="datePublished" content="2023-03-09T02:16:27+08:00" />
+<meta itemprop="dateModified" content="2023-03-09T02:16:27+08:00" />
+<meta itemprop="wordCount" content="198">
+<meta itemprop="keywords" content="" />
+  <meta property="og:image" content="http://blog.rigelx.top/images/logo.png"/>
+  <meta name="twitter:image" content="http://blog.rigelx.top/images/logo.png"/>
+  <meta property="og:image:alt" content="Hugo搭建" />
+  <meta name="twitter:image:alt" content="Hugo搭建" />
+  <link rel="manifest" href="/manifest.json">
+
+<link data-precache rel="stylesheet" href="/assets/main/bundle.min.d3c052b6f3c8c1f938eab040ee94b3ee8d32a3899b9bce71f6297b2691dac45f.css" integrity="sha256-08BStvPIwfk46rBA7pSz7o0yo4mbm85x9il7JpHaxF8=" crossorigin="anonymous">
+
+    <link data-precache rel="stylesheet" href="/assets/viewer/bundle.min.c8cc49b70e98e42caf70845e0d50f8e86821121688c2e5a5f6fc464d40154853.css" integrity="sha256-yMxJtw6Y5CyvcIReDVD46GghEhaIwuWl9vxGTUAVSFM=" crossorigin="anonymous">
+
+
+</head>
+  <body><header>
+  
+<nav class="top-app-bar shadow navbar navbar-expand-xxl fixed-top">
+  <div class="container">
+<a class="navbar-brand d-flex align-items-center flex-grow-1 flex-xxl-grow-0 justify-content-xxl-start ms-2 ms-xxl-0 mx-auto me-xxl-2"
+    href="http://blog.rigelx.top">
+    <picture><img class="logo " alt="Logo" src="http://blog.rigelx.top/images/logo.webp" loading="lazy" width="640" height="640" />
+</picture>
+R1gelX_Blog
+</a>
+
+    <div class="offcanvas-xxl offcanvas-end flex-grow-1" data-bs-scroll="true" tabindex="-1" id="navbarMenus" aria-labelledby="navbarMenusLabel">
+      <div class="offcanvas-header px-4 pb-0">
+        <div class="offcanvas-title h5" id="navbarMenusLabel">R1gelX_Blog</div>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#navbarMenus" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body p-4 pt-0 p-xxl-0">
+        <hr class="d-xxl-none">
+        <ul class="navbar-nav flex-row flex-wrap align-items-center me-auto"><li class="nav-item col-6 col-xxl-auto">
+            <a class="nav-link py-2 px-0 px-xxl-2" href="http://blog.rigelx.top/">
+<span class="menu-icon me-1"><i class="fas fa-home"></i></span>Home
+            </a>
+          </li><li class="nav-item col-6 col-xxl-auto">
+            <a class="nav-link py-2 px-0 px-xxl-2" href="http://blog.rigelx.top/blog">
+<span class="menu-icon me-1"><i class="fas fa-fw fa-blog"></i></span>Blog
+            </a>
+          </li><li class="nav-item col-6 col-xxl-auto">
+            <a class="nav-link py-2 px-0 px-xxl-2" href="http://blog.rigelx.top/archives/">
+<span class="menu-icon me-1"><i class="fas fa-fw fa-file-archive text-primary"></i></span>Archive
+            </a>
+          </li><li class="nav-item col-6 col-xxl-auto">
+            <a class="nav-link py-2 px-0 px-xxl-2" href="http://blog.rigelx.top/docs/">
+<span class="menu-icon me-1"><i class="fas fa-fw fa-file text-success"></i></span>Docs
+            </a>
+          </li><li class="nav-item col-6 col-xxl-auto">
+            <a class="nav-link py-2 px-0 px-xxl-2" href="http://blog.rigelx.top/about/">
+<span class="menu-icon me-1"><i class="fas fa-fw fa-folder text-success"></i></span>About
+            </a>
+          </li>
+        </ul>
+        
+    <hr class="d-xxl-none">
+    <form class="search-bar ms-auto my-1" action="/search/" novalidate>
+      <div class="input-group input-group-sm align-items-center">
+        <span class="btn btn-search disabled position-absolute left-0 border-0 px-1">
+          <i class="fas fa-fw fa-search fa-lg"></i>
+        </span>
+        <input
+          class="my-1 form-control border-white rounded search-input bg-body"
+          name="q"
+          type="search"
+          placeholder="Press / to search"
+          aria-label="Search"
+          required>
+      </div>
+    </form><hr class="d-xxl-none">
+        <ul class="navbar-nav flex-row flex-wrap align-items-center ms-md-auto">
+<li class="nav-item dropdown col-6 col-xxl-auto">
+    <a class="nav-link px-0 py-2 px-xxl-1" href="#" id="fontSizeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fas fa-fw fa-font"></i>
+        <span class="d-xxl-none">Font Size</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="fontSizeDropdown">
+        <li>
+            <button class="font-size-item dropdown-item" data-size="xs">
+                Extra Small
+            </button>
+        </li>
+        <li>
+            <button class="font-size-item dropdown-item" data-size="sm">
+                Small
+            </button>
+        </li>
+        <li>
+            <button class="font-size-item dropdown-item active" data-size="md">
+                Medium
+            </button>
+        </li>
+        <li>
+            <button class="font-size-item dropdown-item" data-size="lg">
+                Large
+            </button>
+        </li>
+        <li>
+            <button class="font-size-item dropdown-item" data-size="xl">
+                Extra Large
+            </button>
+        </li>
+    </ul>
+</li>
+<li class="nav-item dropdown col-6 col-xxl-auto">
+    <a class="nav-link px-0 py-2 px-xxl-1" href="#" id="paletteDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fas fa-fw fa-palette"></i>
+        <span class="d-xxl-none">Palette</span>
+    </a>
+    <ul class="palette-dropdown-menu dropdown-menu dropdown-menu-end px-2 row g-2" aria-labelledby="paletteDropdown">
+            <li class="col-4 my-1">
+                <a role="button" id="palette-blue" aria-label="Blue"
+                    class="btn btn-sm w-100 palette text-bg-blue" data-palette="blue">
+                </a>
+            </li>
+            <li class="col-4 my-1">
+                <a role="button" id="palette-blue-gray" aria-label="Blue Gray"
+                    class="btn btn-sm w-100 palette text-bg-blue-gray" data-palette="blue-gray">
+                </a>
+            </li>
+            <li class="col-4 my-1">
+                <a role="button" id="palette-brown" aria-label="Brown"
+                    class="btn btn-sm w-100 palette text-bg-brown" data-palette="brown">
+                </a>
+            </li>
+            <li class="col-4 my-1">
+                <a role="button" id="palette-cyan" aria-label="Cyan"
+                    class="btn btn-sm w-100 palette text-bg-cyan" data-palette="cyan">
+                </a>
+            </li>
+            <li class="col-4 my-1">
+                <a role="button" id="palette-green" aria-label="Green"
+                    class="btn btn-sm w-100 palette text-bg-green" data-palette="green">
+                </a>
+            </li>
+            <li class="col-4 my-1">
+                <a role="button" id="palette-indigo" aria-label="Indigo"
+                    class="btn btn-sm w-100 palette text-bg-indigo" data-palette="indigo">
+                </a>
+            </li>
+            <li class="col-4 my-1">
+                <a role="button" id="palette-orange" aria-label="Orange"
+                    class="btn btn-sm w-100 palette text-bg-orange" data-palette="orange">
+                </a>
+            </li>
+            <li class="col-4 my-1">
+                <a role="button" id="palette-pink" aria-label="Pink"
+                    class="btn btn-sm w-100 palette text-bg-pink" data-palette="pink">
+                </a>
+            </li>
+            <li class="col-4 my-1">
+                <a role="button" id="palette-purple" aria-label="Purple"
+                    class="btn btn-sm w-100 palette text-bg-purple" data-palette="purple">
+                </a>
+            </li>
+            <li class="col-4 my-1">
+                <a role="button" id="palette-red" aria-label="Red"
+                    class="btn btn-sm w-100 palette text-bg-red" data-palette="red">
+                </a>
+            </li>
+            <li class="col-4 my-1">
+                <a role="button" id="palette-teal" aria-label="Teal"
+                    class="btn btn-sm w-100 palette text-bg-teal" data-palette="teal">
+                </a>
+            </li>
+            <li class="col-4 my-1">
+                <a role="button" id="palette-yellow" aria-label="Yellow"
+                    class="btn btn-sm w-100 palette text-bg-yellow" data-palette="yellow">
+                </a>
+            </li>
+    </ul>
+</li>
+<li class="nav-item dropdown col-6 col-xxl-auto">
+    <a class="nav-link px-0 py-2 px-xxl-1" href="#" id="modeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="mode-icon fas fa-fw fa-adjust" id="modeIcon"></i>
+        <span class="d-xxl-none">Mode</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="modeDropdown">
+        <li class="mode-item" data-color-mode="light" data-icon="sun">
+            <button class="dropdown-item">
+                <i class="mode-icon fas fa-fw fa-sun"></i> Light
+            </button>
+        </li>
+        <li class="mode-item" data-color-mode="dark" data-icon="moon">
+            <button class="dropdown-item">
+                <i class="mode-icon fas fa-fw fa-moon"></i> Dark
+            </button>
+        </li>
+        <li class="mode-item active" data-color-mode="auto" data-icon="adjust">
+            <button class="dropdown-item">
+                <i class="mode-icon fas fa-fw fa-adjust"></i> Auto
+            </button>
+        </li>
+    </ul>
+</li>
+        </ul>
+      </div>
+    </div>
+    <div class="d-flex">
+      <button class="navbar-toggler order-5 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarMenus"
+        aria-controls="navbarMenus" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-ellipsis-h"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+</header>
+
+    <main class="container">
+      <div class="row content"><noscript>
+    <div class="alert alert-danger" role="alert">Your browser does not support JavaScript.</div>
+</noscript>
+
+<div class="col-xxl-8">
+  <div class="container"><nav class="row card component" aria-label="breadcrumb">
+  <div class="card-body pb-0">
+    <ol class="hbs-breadcrumb breadcrumb flex-nowrap"><li class="breadcrumb-item text-surface"><a href="/">Home</a></li><li class="breadcrumb-item text-surface"><a href="/blog/">Blog</a></li><li class="breadcrumb-item active">Hugo搭建</li></ol>
+  </div>
+</nav><div class="post-panel-wrapper position-relative d-flex justify-content-center">
+  <div class="d-flex flex-row justify-content-center rounded rounded-5 border border-primary post-panel position-fixed px-3 py-1 surface shadow">
+    
+    
+
+    
+    
+    
+  <a class="action action-toc d-none d-xxl-block" href="#postTOC" role="button" title="Table of contents">
+    <i class="fas fa-fw fa-list-alt"></i>
+  </a>
+<a class="action action-toc d-block d-xxl-none" href="#post-toc-container" role="button" title="Table of contents">
+  <i class="fas fa-fw fa-list-alt"></i>
+</a>
+    <a class="action action-copyright" href="#post-copyright" role="button" aria-label="Copyright" title="Copyright">
+  <i class="fas fa-fw fa-copyright"></i>
+</a>
+    <a class="action action-post-comments" href="#post-comments" role="button" aria-label="Comments" title="Comments">
+  <i class="fas fa-fw fa-comments"></i>
+</a>
+    
+<a id="sidebarToggler" class="action action-sidebar-toggler d-none d-xxl-block" role="button" title="Sidebar toggler">
+  <i class="fas fa-fw fa-expand-alt" data-fa-transform="rotate-45"></i>
+</a>
+
+    
+  </div>
+</div><article class="row card component mb-4 post">
+  <div class="card-header ">
+    <h1 class="card-title post-title my-2">Hugo搭建</h1>
+  </div>
+  <div class="card-body"><div class="post-meta mb-3">
+  <span class="post-date me-1 mb-1" title="created on 2023-03-09 02:16:27 &#43;0800 CST.">March 9, 2023</span><span class="post-reading-time me-1 mb-1">1 min read</span>
+</div>
+
+<div class="mt-2 mb-3 d-block d-xxl-none">
+    <h2 class="text-surface mb-3">Contents</h2>
+    <div id="post-toc-container">
+        </div>
+    <hr class="text-secondary">
+</div><div class="post-content mb-3" data-bs-spy="scroll" data-bs-target="#TableOfContents" tabindex="0">
+        <div id="post-content-body"><h1 id="hugo的简单使用" data-numberify>hugo的简单使用<a class="anchor ms-1" href="#hugo的简单使用"></a></h1>
+<h2 id="安装" data-numberify>安装<a class="anchor ms-1" href="#安装"></a></h2>
+<p>安装选择官方推荐的巧克力(Chocolatey)</p>
+<h3 id="chocolatey安装" data-numberify>Chocolatey安装<a class="anchor ms-1" href="#chocolatey安装"></a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="ln">1</span><span class="cl"><span class="nb">Set-ExecutionPolicy</span> <span class="n">Bypass</span> <span class="n">-Scope</span> <span class="k">Process</span> <span class="n">-Force</span><span class="p">;</span> <span class="p">[</span><span class="no">System.Net.ServicePointManager</span><span class="p">]::</span><span class="n">SecurityProtocol</span> <span class="p">=</span> <span class="p">[</span><span class="no">System.Net.ServicePointManager</span><span class="p">]::</span><span class="n">SecurityProtocol</span> <span class="o">-bor</span> <span class="mf">3072</span><span class="p">;</span> <span class="nb">iex </span><span class="p">((</span><span class="nb">New-Object</span> <span class="n">System</span><span class="p">.</span><span class="py">Net</span><span class="p">.</span><span class="n">WebClient</span><span class="p">).</span><span class="py">DownloadString</span><span class="p">(</span><span class="s1">&#39;https://community.chocolatey.org/install.ps1&#39;</span><span class="p">))</span>
+</span></span></code></pre></div><p>PS:
+前置条件：运行Get-ExecutionPolicy。如果返回Restricted，则运行Set-ExecutionPolicy AllSigned或Set-ExecutionPolicy Bypass -Scope Process。</p>
+<h3 id="安装golang" data-numberify>安装GOLANG<a class="anchor ms-1" href="#安装golang"></a></h3>
+<p>使用<code>choco install golang -y</code></p>
+<h3 id="安装hugo扩展" data-numberify>安装hugo扩展<a class="anchor ms-1" href="#安装hugo扩展"></a></h3>
+<p>使用<code>choco install hugo-extended</code></p>
+<h3 id="安装hugo" data-numberify>安装hugo<a class="anchor ms-1" href="#安装hugo"></a></h3>
+<ol>
+<li>设置go的代理 <code> go env -w GOPROXY=https://goproxy.cn,direct</code></li>
+<li>安装hugo源码 <code>go env -w GOPROXY=https://goproxy.cn,direct</code></li>
+</ol>
+<h3 id="命令行环境" data-numberify>命令行环境<a class="anchor ms-1" href="#命令行环境"></a></h3>
+<p>二者选一</p>
+<h4 id="powershell" data-numberify>powershell<a class="anchor ms-1" href="#powershell"></a></h4>
+<p>这个powershell和你本机的可能不一样，如何测试？</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="ln">1</span><span class="cl"><span class="nb">echo </span><span class="mf">123</span> <span class="p">&gt;&gt;</span> <span class="mf">123</span><span class="p">.</span><span class="py">txt</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="nb">cat </span><span class="mf">123</span><span class="p">.</span><span class="py">txt</span>
+</span></span></code></pre></div><p>应该能看到在命令能看到读取到的123
+否则就点击<a href="https://github.com/PowerShell/PowerShell/releases/download/v7.3.2/PowerShell-7.3.2-win-x64.msi" target="_blank" rel="noopener noreferrer">Fetching Title#lyss<i class="fas fa-external-link-square-alt ms-1"></i></a> 进行安装</p>
+<h3 id="git-bash" data-numberify>git bash<a class="anchor ms-1" href="#git-bash"></a></h3>
+<p>git bash的安装资料很多了，这里就不列出了
+<br>
+<picture><img class="img-fluid " alt="" src="http://blog.rigelx.top/Pasted%20image%2020230309020034.png" loading="lazy" width="438" height="153" />
+</picture>
+
+</p>
+<h2 id="建立站点" data-numberify>建立站点<a class="anchor ms-1" href="#建立站点"></a></h2>
+<p>在博客的文件夹（最好自己找个地方建立一下）在这个目录打开命令行
+<br>
+<picture><img class="img-fluid " alt="" src="http://blog.rigelx.top/Pasted%20image%2020230309020212.png" loading="lazy" width="303" height="108" />
+</picture>
+
+</p>
+<h3 id="建立一个example" data-numberify>建立一个example<a class="anchor ms-1" href="#建立一个example"></a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="ln">1</span><span class="cl"><span class="n">hugo</span> <span class="n">new</span> <span class="n">site</span> <span class="n">quickstart</span> <span class="c">#这是网站名称，会在当前目录建立一个同名文件夹</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="nb">cd </span><span class="n">quickstart</span> 
+</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="n">git</span> <span class="n">init</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="n">git</span> <span class="n">submodule</span> <span class="n">add</span> <span class="n">https</span><span class="err">:</span><span class="p">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">theNewDynamic</span><span class="p">/</span><span class="nb">gohugo-theme</span><span class="n">-ananke</span> <span class="n">themes</span><span class="p">/</span><span class="n">ananke</span><span class="c">#这是从github获取主题</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="nb">echo </span><span class="s2">&#34;theme = &#39;ananke&#39;&#34;</span> <span class="p">&gt;&gt;</span> <span class="n">config</span><span class="p">.</span><span class="n">toml</span><span class="c">#设置配置文件，指定主题为ananke，但如果你的powershell出现问题，那就手动去修改这个</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl"><span class="n">hugo</span> <span class="n">server</span>
+</span></span></code></pre></div><br>
+![](Pasted%20image%2020230309020520.png)
+<br>
+![](Pasted%20image%2020230309020742.png)
+如果遇到编码问题导致`hugo server`运行失败，那就用vs code打开然后保存为UTF-8,之后的配置修改就在vs code里改就好了。
+<br>
+![](Pasted%20image%2020230309021343%201.png)
+运行成功应该如下
+<br>
+![](Pasted%20image%2020230309021353.png)
+<p>访问localhost:1313应该得到了如下的界面
+<br>
+<picture><img class="img-fluid " alt="" src="http://blog.rigelx.top/Pasted%20image%2020230309021442.png" loading="lazy" width="1961" height="935" />
+</picture>
+
+</p>
+<h3 id="添加一个页面" data-numberify>添加一个页面<a class="anchor ms-1" href="#添加一个页面"></a></h3>
+<p>使用命令<code>hugo new post/xxx.md</code>
+这里我建立一个markdown
+<br>
+<picture><img class="img-fluid " alt="" src="http://blog.rigelx.top/Pasted%20image%2020230309021638.png" loading="lazy" width="599" height="52" />
+</picture>
+
+
+然后在content/posts下会生成这个文件，对其进行编辑然后保存</p>
+<p>接着我们再次打开服务，使用<code>hugo server -D</code>
+<br>
+<picture><img class="img-fluid " alt="" src="http://blog.rigelx.top/Pasted%20image%2020230309022003.png" loading="lazy" width="2523" height="1342" />
+</picture>
+
+</p>
+<h3 id="切换主题" data-numberify>切换主题<a class="anchor ms-1" href="#切换主题"></a></h3>
+<p>随便找了个主题
+然后切换到theme目录<code>cd theme</code>
+安装主题
+<code>git submodule add https://github.com/razonyang/hugo-theme-bootstrap themes/hugo-theme-bootstrap</code>
+该主题需要一个临时文件夹
+<code>git clone https://github.com/razonyang/hugo-theme-bootstrap-skeleton tmp/hbs-skeleton</code>
+然后拷贝文件到相应目录
+<code>cp -a tmp/hbs-skeleton/config/* ./config</code>
+<code>cp -r tmp/hbs-skeleton/content/* ./content</code>
+<code>cp -r tmp/hbs-skeleton/archetypes/* ./archetypes</code>
+<code>cp -r tmp/hbs-skeleton/static/* ./static</code>
+<code>cp -r tmp/hbs-skeleton/* ./assets</code></p>
+<p>然后执行hugo mod npm pack
+修改config.toml里的theme参数
+然后安装npm <code>choco install nodejs.install</code>
+安装后执行<code>npm install</code></p>
+<p>再次启动服务器
+<br>
+<picture><img class="img-fluid " alt="" src="http://blog.rigelx.top/Pasted%20image%2020230309030105.png" loading="lazy" width="1671" height="886" />
+</picture>
+
+</p>
+<p>接着就是修改相关配置，这个主题的文档很齐全<a href="https://hbs.razonyang.com/v1/zh-hans/docs/widgets/" target="_blank" rel="noopener noreferrer">小部件 - Hugo Bootstrap<i class="fas fa-external-link-square-alt ms-1"></i></a></p>
+<h2 id="发布" data-numberify>发布<a class="anchor ms-1" href="#发布"></a></h2>
+<h3 id="生成静态文件" data-numberify>生成静态文件<a class="anchor ms-1" href="#生成静态文件"></a></h3>
+<p><code>hugo -d docs</code>
+然后参照<a href="https://zhuanlan.zhihu.com/p/37752930" target="_blank" rel="noopener noreferrer">如何使用Hugo在GitHub Pages上搭建免费个人网站 - 知乎<i class="fas fa-external-link-square-alt ms-1"></i></a>就行</p>
+<h3 id="创建github-pages" data-numberify>创建Github-pages<a class="anchor ms-1" href="#创建github-pages"></a></h3>
+<p>以这里注册的新github为例子，创建名为githubid.github.io的仓库
+即 eg1o.github.io
+然后到docs目录下</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="ln">1</span><span class="cl"><span class="n">git</span> <span class="n">init</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">https</span><span class="err">:</span><span class="p">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">Nianze</span><span class="p">/</span><span class="nb">personal-site</span><span class="p">.</span><span class="py">git</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="n">git</span> <span class="n">add</span> <span class="p">.</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="n">git</span> <span class="n">commit</span> <span class="n">-m</span> <span class="s2">&#34;first commit&#34;</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="n">git</span> <span class="n">fetch</span> <span class="n">origin</span> <span class="c"># 拉取 github 项目</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl"><span class="n">git</span> <span class="n">push</span> <span class="p">-</span><span class="n">-set-upstream</span> <span class="n">origin</span> <span class="n">master</span>
+</span></span></code></pre></div></div>
+</div>
+</div><div class="card-footer">
+  <div class="post-navs d-flex justify-content-evenly"><div class="post-nav post-prev">
+      <i class="fas fa-fw fa-chevron-down post-prev-icon me-1" data-fa-transform="rotate-90"></i>
+      <a href="/blog/rwctf_wp/">Rwctf_wp</a>
+    </div></div>
+</div></article><div class="post-copyright mb-3 row card component" id="post-copyright">
+    <div class="card-header">
+        <h2 class="card-title fs-4 my-2 text-surface">Copyright</h2>
+    </div>
+    <div class="card-body"><a class="d-flex align-items-center flex-column" target="_blank" rel="license noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en">
+  <span><i class="fab fa-fw fa-2x fa-creative-commons"></i><i class="fab fa-fw fa-2x fa-creative-commons-by"></i><i class="fab fa-fw fa-2x fa-creative-commons-nc"></i><i class="fab fa-fw fa-2x fa-creative-commons-nd"></i></span>
+  CC BY-NC-ND 4.0 
+</a>
+
+
+    </div>
+</div><section class="related-posts row card component">
+      <div class="card-header">
+        <h2 class="card-title fs-4 my-2 text-surface">
+          Related Posts
+        </h2>
+      </div>
+      <div class="card-body slide px-1">
+        <div class="slide-inner row gx-0"><div class="col-12 col-md-6 col-lg-4 me-2">
+            <div class="post-card card card-body p-0 border-0 surface">
+  
+  <div
+    class="post-card-default-img card-img-top d-flex align-items-center justify-content-center bg-body-secondary mb-1">
+    NO IMAGE
+  </div>
+
+  <a class="post-title" href="/posts/rwctf_wp/">
+    Rwctf_wp
+  </a>
+  <div class="post-meta mb-0">
+    March 9, 2023
+
+  </div>
+</div>
+
+          </div></div>
+        <button class="slide-control-left">
+          <i class="fas fa-2x fa-chevron-circle-down" data-fa-transform="rotate-90"></i>
+          <span class="visually-hidden">Left</span>
+        </button>
+        <button class="slide-control-right">
+          <i class="fas fa-2x fa-chevron-circle-down" data-fa-transform="rotate-270"></i>
+          <span class="visually-hidden">Right</span>
+        </button>
+      </div>
+    </section><div class="card component row post-comments" id="post-comments">
+  <div class="card-header">
+    <h2 class="card-title my-2 fs-4 text-surface">Comments</h2>
+  </div>
+  <div class="card-body">
+<div class="giscus"></div>
+
+
+
+</div>
+</div></div>
+</div>
+<aside class="col-xxl-4 sidebar d-flex">
+  <div class="container d-flex flex-column">
+    
+    
+<div class="accordion profile profile-compact">
+  <div class="accordion-item card row component">
+    <div class="accordion-header card-header border-0" id="profile-header">
+      <a 
+        class="accordion-button d-lg-none mb-2 shadow-none p-0 bg-transparent text-surface"
+        role="button" data-bs-toggle="collapse" href="#profile" aria-expanded="true" aria-controls="profile">
+        Profile
+      </a>
+    </div>
+    <div class="card-body collapse accordion-collapse accordion-body d-lg-block show" id="profile" aria-labelledby="profile-header">
+      <div class="d-flex">
+        <div class="d-flex flex-shrink-0 justify-content-center align-items-center"><picture><source srcset="http://blog.rigelx.top/images/profile.webp" type="image/webp" /><img class="profile-avatar rounded-circle " alt="R1gelX" src="http://blog.rigelx.top/images/profile.png" loading="lazy" data-viewer-invisible width="640" height="640" />
+</picture>
+</div>
+        <div class="profile-meta flex-grow-1 ms-3 text-center"><div class="profile-name fw-fold fs-lg">R1gelX</div><div class="profile-location"><i class="fas fa-fw fa-map-marker-alt"></i>Earth/Home</div><a class="profile-about text-primary" href="/about/"><i class="fas fa-fw fa-user"></i>About</a><a class="profile-contact text-primary" href="/contact/"><i class="fas fa-fw fa-question-circle"></i>Contact Us</a></div>
+      </div>
+
+
+<nav class="social-links nav justify-content-center mt-1 justify-content-around">
+    <a class="nav-link social-link" href="mailto:r1gelx@outlook.com" title="Email">
+      <i class="fas fa-fw fa-2x fa-envelope" style="color: #0963ac;"></i>
+    </a>
+      <a class="nav-link social-link" target="_blank" href="https://github.com/r1gelx29@github.com" title="GitHub" rel="me">
+        <i class="fa-fw fa-2x fab fa-github"
+          ></i>
+      </a>
+      <a class="nav-link social-link" target="_blank" href="https://rigelx.top/" title="Website" rel="me">
+        <i class="fa-fw fa-2x fas fa-link"
+          ></i>
+      </a>
+  <a class="nav-link social-link" target="_blank" href="/index.xml" title="RSS" rel="me">
+    <i class="fas fa-fw fa-2x fa-rss" style="color: #ea6221;"></i>
+  </a>
+</nav>
+</div>
+  </div>
+</div>
+
+
+<div class="accordion taxonomies-toggle">
+    <div class="row card component accordion-item">
+        <div class="accordion-header card-header border-0">
+            <a
+                class="accordion-button d-lg-none mb-1 shadow-none p-0 bg-transparent"
+                role="button" data-bs-toggle="collapse" href="#taxonomies-toggle" aria-expanded="true" aria-controls="taxonomies-toggle">
+                Taxonomies
+            </a>
+        </div>
+        <div class="card-body collapse accordion-collapse accordion-body d-lg-block show" id="taxonomies-toggle">
+            <ul class="nav nav-pills nav-fill" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="taxonomyArchivesTab" data-bs-toggle="tab" data-bs-target="#taxonomyArchives" 
+                        type="button" role="tab" aria-controls="taxonomyArchives" aria-selected="true">
+                        Archives
+                    </button>
+                </li>
+            </ul>
+            
+            <div class="tab-content mt-3">
+                <div class="tab-pane" id="taxonomyArchives" role="tabpanel" aria-labelledby="taxonomyArchivesTab" tabindex="0">
+
+    <a href="/archives/2023/" class="btn btn-sm btn-secondary post-taxonomy ps-3 me-2 mb-2" title="2023">
+    2023 <span class="badge badge-sm text-secondary bg-white ms-1">1</span>
+    </a>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="accordion posts-toggle">
+      <div class="row card component accordion-item">
+        <div class="accordion-header card-header border-0">
+          <a
+            class="accordion-button d-lg-none mb-1 shadow-none p-0 bg-transparent"
+            role="button"
+            data-bs-toggle="collapse"
+            href="#posts-toggle"
+            aria-expanded="true"
+            aria-controls="posts-toggle">
+            Posts
+          </a>
+        </div>
+        <div
+          class="card-body collapse accordion-collapse accordion-body d-lg-block show"
+          id="posts-toggle">
+          <ul class="nav nav-pills nav-fill" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="recent-posts-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#recent-posts"
+                  type="button"
+                  role="tab"
+                  aria-controls="recent-posts"
+                  aria-selected="true">
+                  Recent Posts
+                </button>
+              </li>
+          </ul>
+
+          <div class="tab-content mt-3">
+              <div
+                class="tab-pane active"
+                id="recent-posts"
+                role="tabpanel"
+                aria-labelledby="recent-posts-tab"
+                tabindex="0">
+                <ul class="post-list list-unstyled ms-1">
+                    <li class="mb-2">
+  <div class="d-flex">
+    <div
+      class="flex-grow-1 d-flex flex-column h-auto justify-content-center">
+      <a class="post-title" href="/posts/rwctf_wp/">
+        Rwctf_wp
+      </a>
+      <div class="post-meta mt-2">
+        <span class="post-date">
+          March 9, 2023
+        </span>
+      </div>
+    </div>
+  </div>
+                    </li>
+                </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="accordion post-toc d-none d-lg-block">
+  <div class="accordion-item row mb-4 card component" id="postTOC">
+    <div class="card-header accordion-header">
+      <h2 class="card-title fs-4 my-2 text-surface d-none d-lg-block">Contents</h2>
+      <a class="accordion-button d-lg-none mb-1 collapsed shadow-none p-0 bg-transparent" role="button" data-bs-toggle="collapse" href="#post-toc" aria-expanded="false" aria-controls="post-toc">
+        Contents
+      </a>
+    </div>
+    <div class="card-body collapse accordion-collapse accordion-body d-lg-block" id="post-toc">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#安装">安装</a>
+      <ul>
+        <li><a href="#chocolatey安装">Chocolatey安装</a></li>
+        <li><a href="#安装golang">安装GOLANG</a></li>
+        <li><a href="#安装hugo扩展">安装hugo扩展</a></li>
+        <li><a href="#安装hugo">安装hugo</a></li>
+        <li><a href="#命令行环境">命令行环境</a></li>
+        <li><a href="#git-bash">git bash</a></li>
+      </ul>
+    </li>
+    <li><a href="#建立站点">建立站点</a>
+      <ul>
+        <li><a href="#建立一个example">建立一个example</a></li>
+        <li><a href="#添加一个页面">添加一个页面</a></li>
+        <li><a href="#切换主题">切换主题</a></li>
+      </ul>
+    </li>
+    <li><a href="#发布">发布</a>
+      <ul>
+        <li><a href="#生成静态文件">生成静态文件</a></li>
+        <li><a href="#创建github-pages">创建Github-pages</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+  </div>
+</aside>
+
+      </div>
+    </main><footer class="footer mt-auto py-3 text-center container"><div class="offcanvas offcanvas-bottom h-auto" tabindex="-1" id="offcanvasActionsPanel"
+  aria-labelledby="offcanvasActionsPanelLabel">
+  <div class="offcanvas-header">
+    <div class="offcanvas-title h5" id="offcanvasActionsPanelLabel">
+      <i class="fas fa-fw fa-th-large me-1"></i>
+      Actions
+    </div>
+    <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" data-bs-target="offcanvasActionsPanel" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body mt-2"><div class="social-share mb-4 d-flex overflow-auto">
+      <a class="btn-social-share d-flex flex-column align-items-center me-3" rel="noopener noreferrer" aria-label="Twitter Share Button"
+      target="_blank" href="https://twitter.com/intent/tweet?title=Offline&url=http%3a%2f%2fblog.rigelx.top%2foffline%2f">
+        <i class="fab fa-2x fa-fw fa-twitter mb-2"></i> Twitter
+      </a>
+      <a class="btn-social-share d-flex flex-column align-items-center me-3" rel="noopener noreferrer" aria-label="Facebook Share Button"
+        target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fblog.rigelx.top%2foffline%2f">
+        <i class="fab fa-2x fa-fw fa-facebook-f mb-2"></i> Facebook
+      </a>
+    </div>
+    <hr class="mb-4"><div class="actions d-flex overflow-auto align-items-center">
+      <a role="button" class="action action-go-back d-flex flex-column align-items-center me-3" href="javascript: window.history.back();">
+        <span class="action-icon mb-2"><i class="fas fa-2x fa-chevron-circle-down" data-fa-transform="rotate-90"></i></span> Go back
+      </a>
+      <a role="button" class="action action-reload-page d-flex flex-column align-items-center me-3">
+        <span class="action-icon mb-2"><i class="fas fa-2x fa-redo-alt"></i></span> Reload
+      </a>
+      <a role="button" class="action action-copy-url d-flex flex-column align-items-center me-3">
+        <span class="action-icon mb-2"><i class="fas fa-2x fa-link"></i></span> Copy URL
+      </a>
+    </div>
+  </div>
+</div><div class="row text-center">
+  <div class="col-12 mt-2">
+    <p class="mb-2">R1gelX_Blog</p>
+    <p class="text-secondary mb-2"><small></small></p><div class="copyright mb-2 text-secondary">
+  <small>No Copyright © 2023-2023 . All Rights Reserved.
+</small>
+</div>
+<div class="powered-by mb-2 text-secondary">
+  <small>
+    Build with ❤️ from the <a class="text-primary" href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a> and the <a class="text-primary" href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank" rel="noopener noreferrer">HBS</a> theme.
+  </small>
+</div>
+
+
+<nav class="social-links nav justify-content-center mb-2 mt-3">
+  <a class="nav-link social-link p-0 me-1 mb-2" target="_blank" href="/index.xml" title="RSS" rel="me">
+    <i class="fas fa-fw fa-2x fa-rss" style="color: #ea6221;"></i>
+  </a>
+</nav>
+</div>
+  <div class="col-12 col-lg-8 offset-0 offset-lg-1"></div>
+</div>
+</footer>
+<script data-precache src="/assets/main/bundle.min.6a6f316fd8e12bd42664a13e26fabafe7ee30029f44812a078af40e29e8499a3.js" integrity="sha256-am8xb9jhK9QmZKE&#43;Jvq6/n7jACn0SBKgeK9A4p6EmaM=" crossorigin="anonymous" async></script><script data-precache src="/assets/icons/bundle.min.4f30d5267a9f2f9d45ed93969d45ec626100a969a8b91f71f753315a261e9034.js" integrity="sha256-TzDVJnqfL51F7ZOWnUXsYmEAqWmouR9x91MxWiYekDQ=" crossorigin="anonymous" defer></script>
+<script data-precache src="/assets/viewer/bundle.min.9ba76665e3c9fa036c059c1c85f287b5780b8c3e27f6cc9cd6372b90c42cf347.js" integrity="sha256-m6dmZePJ&#43;gNsBZwchfKHtXgLjD4n9syc1jcrkMQs80c=" crossorigin="anonymous" defer></script><script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('\/service-worker.min.js').then(function(reg) {
+      console.log('Successfully registered service worker', reg);
+    }).catch(function(err) {
+      console.warn('Error whilst registering service worker', err);
+    });
+  });
+}
+</script>
+<script src="https://giscus.app/client.js"
+    data-repo="razonyang/hugo-theme-bootstrap"
+    data-repo-id="MDEwOlJlcG9zaXRvcnkzMDQzMzI4NTM="
+    data-category="General"
+    data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyODkzODg2"
+    data-mapping="pathname"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    defer>
+</script>
+
+
+  </body>
+</html>
