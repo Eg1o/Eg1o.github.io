@@ -15,10 +15,8 @@
       
       <guid>https://blog.rigelx.top/posts/rwctf_wp/</guid>
       <description><![CDATA[rwctf 部分wp
-chatwuu
-基于ws的聊天室，有后台bot，仅可以向bot提交聊天室的url，flag在bot的cookie里。
-evil connect
-在 index.html中
+chatwuu基于ws的聊天室，有后台bot，仅可以向bot提交聊天室的url，flag在bot的cookie里。
+evil connect在 index.html中
 1let query = new URLSearchParams(location.search), 2 nickname = query.get(&#39;nickname&#39;), 3 room = query.get(&#39;room&#39;); 4 if (!nickname || !room) { 5 reset(); 6 } 7 for (let k of query.keys()) { 8 if (![&#39;nickname&#39;, &#39;room&#39;].includes(k)) { 9 reset(); 10 } 11 } 12 document.title += &#39; - &#39; + room; 13 let socket = io(`/${location.search}`), 14 messages = document.getElementById(&#39;messages&#39;), 15 form = document.getElementById(&#39;form&#39;), 16 input = document.]]></description>
     </item>
     
