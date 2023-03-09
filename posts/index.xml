@@ -2,23 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on R1gelX_Blog</title>
-    <link>https://blog.rigelx.top/posts/</link>
+    <link>http://blog.rigelx.top/posts/</link>
     <description>Recent content in Posts on R1gelX_Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>No Copyright © 2023-2023 . All Rights Reserved.
 </copyright>
-    <lastBuildDate>Thu, 09 Mar 2023 02:16:27 +0800</lastBuildDate><atom:link href="https://blog.rigelx.top/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Mar 2023 02:16:27 +0800</lastBuildDate><atom:link href="http://blog.rigelx.top/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Rwctf_wp</title>
-      <link>https://blog.rigelx.top/posts/rwctf_wp/</link>
+      <link>http://blog.rigelx.top/posts/rwctf_wp/</link>
       <pubDate>Thu, 09 Mar 2023 02:16:27 +0800</pubDate>
       
-      <guid>https://blog.rigelx.top/posts/rwctf_wp/</guid>
+      <guid>http://blog.rigelx.top/posts/rwctf_wp/</guid>
       <description><![CDATA[rwctf 部分wp
-chatwuu
-基于ws的聊天室，有后台bot，仅可以向bot提交聊天室的url，flag在bot的cookie里。
-evil connect
-在 index.html中
+chatwuu基于ws的聊天室，有后台bot，仅可以向bot提交聊天室的url，flag在bot的cookie里。
+evil connect在 index.html中
 1let query = new URLSearchParams(location.search), 2 nickname = query.get(&#39;nickname&#39;), 3 room = query.get(&#39;room&#39;); 4 if (!nickname || !room) { 5 reset(); 6 } 7 for (let k of query.keys()) { 8 if (![&#39;nickname&#39;, &#39;room&#39;].includes(k)) { 9 reset(); 10 } 11 } 12 document.title += &#39; - &#39; + room; 13 let socket = io(`/${location.search}`), 14 messages = document.getElementById(&#39;messages&#39;), 15 form = document.getElementById(&#39;form&#39;), 16 input = document.]]></description>
     </item>
     
