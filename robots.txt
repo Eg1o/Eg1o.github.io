@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: http://blog.rigelx.top/sitemap.xml
+Sitemap: https://blog.rigelx.top/sitemap.xml
